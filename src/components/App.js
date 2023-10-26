@@ -15,6 +15,16 @@ const App = () => {
     color : "red"
   }
 
+  const checkuser= (e)=>{
+    e.preventDefault();
+    if (name === "" || email === "" || password === "") {
+      alert("all fields ar required")
+      return;
+    }
+    console.log(name,email,password)
+
+  }
+
   useEffect(() => {
     if (name.length === 0) {
       setNameError("Name is required")
@@ -29,7 +39,7 @@ const App = () => {
       setEmailError("");
     }
     else {
-      setEmailError("Invalid emial format")
+      setEmailError("Invalid email format")
     }
   }, [email])
 
