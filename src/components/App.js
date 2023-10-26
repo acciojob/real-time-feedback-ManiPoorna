@@ -48,17 +48,17 @@ const App = () => {
         <label htmlFor="name">Name: </label>
         <input onChange={(e) => setName(e.target.value)} type="text" id="name" />
         {
-          nameError && <p style={style}>{nameError}</p>
+          nameError && <p className="error-message" style={style}>{nameError}</p>
         }
         <label htmlFor="email">Email: </label>
         <input onChange={(e) => setEmail(e.target.value)} type="email" id="email" />
         {
-          emailError && <p style={style}>{ emailError}</p>
+          emailError && <p className="error-message" style={style}>{ emailError}</p>
         }
         <label htmlFor="password">Password: </label>
         <input onChange={(e) => setPassword(e.target.value)} type="password" id="password" />
         {
-          passwordError && <p style={style}>{passwordError}</p>
+          passwordError && <p className="error-message" style={style}>{passwordError}</p>
         }
         <button type="submit">Submit</button>
       </form>
